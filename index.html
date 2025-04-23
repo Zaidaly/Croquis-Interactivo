@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Croquis Interactivo - Escuela</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Croquis Interactivo de la Escuela</h1>
+  <div class="map-container">
+    <img src="croquis.png" alt="Croquis Escuela" class="map-img">
+    <div class="hotspot" style="top: 40%; left: 60%;" onclick="openModal('cafeteria')"></div>
+    <div class="hotspot" style="top: 35%; left: 50%;" onclick="openModal('biblioteca')"></div>
+    <div class="hotspot" style="top: 45%; left: 40%;" onclick="openModal('computo')"></div>
+  </div>
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
